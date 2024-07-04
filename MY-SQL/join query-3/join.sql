@@ -1,4 +1,4 @@
--- create database foreignkey;
+create database foreignkey;
  use foreignkey;
 -- show tables;
 -- 1. -------------------------------- 
@@ -133,3 +133,68 @@ insert into SALES_ORDER_DETAILS values
 ('O0004' , 'P0006' , 5 , 3 , 1050);
 
 select * from SALES_ORDER_DETAILS;
+
+-- 1  
+ select pm. DESCRIPION,cm.NAME from SALES_ORDER_DETAILS sod
+ inner join PRODUCT_MASTER1 pm on sod . PRODUCTNO = pm.PRODUCTNO
+ inner join SALES_ORDER so on sod.ORDERNO = so.ORDERNO
+ inner join CLIENT_MASTER1 cm on cm.name = 'ivan bayross';
+ 
+ -- 2
+
+  select  *
+  from sales_order_details sod
+  inner join product_master1 pm
+   on sod.productno =  pm.productno
+   inner join sales_order so 
+   on  so.orderno = sod.orderno
+   where  month(so.DELYDATE) = month(current_date());
+ 
+ -- 3
+ 
+ select pm.productno , pm.DESCRIPION , pm.PEORDERLVL
+  from sales_order_details sod
+  inner join product_master1 pm
+  on pm.productno = sod.productno
+  where pm.PEORDERLVL > 30;
+ 
+ 
+ -- 4
+select cm.clientno , cm.name , pm.descripion from client_master1 cm
+inner join sales_order so on cm.clientno = so.clientno
+inner join sales_order_details sod on so.orderno = sod.orderno
+inner join product_master1 pm on sod.productno = pm.productno
+where pm.descripion = 'Trousers';
+
+-- 5
+  select pm.DESCRIPION ,  sod.QTYOEDERED
+  from sales_order_details sod
+  inner join sales_order so
+  on so.orderno = sod.orderno
+  inner join  product_master1 pm
+  on pm.productno = sod.productno
+  inner join client_master1 cm
+  on cm.clientno = so.clientno
+  where  pm.DESCRIPION = 'pull overs' && sod.QTYOEDERED < 5;
+  
+  select * from sales_order_details;
+
+	-- 6 
+	select * from client_master1;
+	select * from product_master1;
+
+	 select sod.orderno,cm.name , pm.qtyonhand , sod.qtyoedered from sales_order_details sod
+	 inner join sales_order so on sod.orderno = so.orderno
+	 inner join product_master1 pm on sod.productno = pm.productno
+	 inner join client_master1 cm on so.clientno  = cm.clientno
+	 where cm.name in('ivan bayross' , 'Mamta muzumdar');
+	 
+	 -- 7
+	  select  cm.clientno ,so.orderno ,pm.QTYONHAND ,pm.DESCRIPION
+	   from sales_order_details sod
+	   inner join sales_order  so on sod.orderno = so.orderno
+	   inner join product_master1 pm on pm.productno = sod.productno
+	   inner join client_master1 cm on cm.clientno = so.clientno
+	   where cm.clientno in ('c0001' ,'c0002');
+	  
+ 
