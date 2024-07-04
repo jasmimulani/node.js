@@ -1,3 +1,4 @@
+
 create database foreignkey;
  use foreignkey;
 -- show tables;
