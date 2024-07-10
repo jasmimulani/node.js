@@ -1,13 +1,15 @@
-db.user.find({})
+// db.user.find()
+// db.user.find({"movies.floop":'sui-dhaga'})
+// db.user.findOne({gender:"female"})
 
-// db.user.find({"movies.floop":"sui-dhaga"})
 
-// db.user.findOne({filter} ,{update data} ,{upsert:true})
+//  data update
+// db.uder.updateOne({filter},{update date} , {upsert:true})
 
 // db.user.updateMany()
 
-// db.user.updateOne({gender:'female'},
-// {$set:{age:20 , email:'joly@test.in'}},
+// db.user.updateOne({gender:"female"},
+// {$set:{age:22, email:'jolly@text.in'}},
 // {upsert:true})
 
 // db.user.updateMany({gender:'female'},
@@ -17,3 +19,13 @@ db.user.find({})
 // }}, 
 // {upsert:true}
 // )
+
+
+// db.user.deleteOne({filter})
+// db.user.deleteOne({_id:ObjectId("668d584f94c3a02d26e8e3e8")})
+
+// db.user.deleteMany({gender:"female"})
+
+// db.user.drop()
+// show coll
+// db.dropdatabase()
