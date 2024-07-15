@@ -1,3 +1,4 @@
+db.books.insertMany(
 [
   {
     "author": "Chinua Achebe",
@@ -999,4 +1000,4 @@
     "title": "Memoirs of Hadrian",
     "year": 1951
   }
-]
+])
