@@ -33,7 +33,7 @@
 
 // -------------------------------------------------------
 
-db.client_master.find({})
+// db.client_master.find({})
 
 // db.client_master.updateOne({name:"jasmi"},{$rename: {name:'NAME'})
 // db.client_master.updateOne({name:"srushti"}, {$unset: { "mobile" })
