@@ -1,0 +1,7 @@
+this is first line of txt file
+  #include<stdio.h>
+  int main(){
+  printf("this is  data stote variable in print method");
+  return 0;
+  }
+data hello this is append and this is a second method async
