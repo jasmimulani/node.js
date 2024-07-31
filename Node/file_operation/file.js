@@ -51,7 +51,7 @@ const fs = require('fs');  // comman js
 //     console.log(data);
 // })
 
-// ------------------------ sync method
+// ------------------------ sync method 
 
 // // let aa = fs.readFileSync('./hello.c' ,'utf-16le')
 // // let aa = fs.readFileSync('./hello.c' ,'ucs-2')
@@ -126,12 +126,12 @@ function mul(a,b){
 
 // ------------------------ sync
 
-let t1 = performance.now();
- console.log('stating---------->',t1);
- console.log('addition ----------->>>>>>>', add(10,20));
-let aa = fs.readFileSync('./qode.txt' ,'utf-8')
-console.log(aa);
-console.log('multi->>>>>>>>' ,mul(10,50));
-let t2 = performance.now();
-console.log('end time ----------->' ,t2);
-console.log('total time ----------->' ,t2-t1);
+// let t1 = performance.now();
+//  console.log('stating---------->',t1);
+//  console.log('addition ----------->>>>>>>', add(10,20));
+// let aa = fs.readFileSync('./qode.txt' ,'utf-8')
+// console.log(aa);
+// console.log('multi->>>>>>>>' ,mul(10,50));
+// let t2 = performance.now();
+// console.log('end time ----------->' ,t2);
+// console.log('total time ----------->' ,t2-t1);
