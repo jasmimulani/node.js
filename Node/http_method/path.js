@@ -9,11 +9,11 @@ const dir = path.dirname('/foo/bar/baz/quux'); // directory name
 console.log(dir);
 
 
-const ext =path.extname('index.html')
+const ext =path.extname('index.html') //extention 
 console.log(ext);
 
 const join = path.join('c:' , 'temp' , 'myfile.html')
-console.log(join);
+console.log(join);                                     // join 
 
 
 const fo = path.format({
